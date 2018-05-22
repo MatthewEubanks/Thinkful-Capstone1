@@ -42,9 +42,6 @@ $('.dog-selector').change(function () {
         getChosenDog();
     });
 });
-//$('.demo a').click(function() {
-//   getChosenDog();
-//});
 $(document).ready(function () {
     loadDogs();
 });
