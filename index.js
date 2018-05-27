@@ -44,4 +44,32 @@ $('.dog-selector').change(function () {
 });
 $(document).ready(function () {
     loadDogs();
+    openHidden();
 });
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+};
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+};
+
+function openHidden() {
+    $('.chooseDog').on('click', () => {
+        $('.getDogPic').hide();
+        $('.about').hide();
+        $('.breeds').show();
+    });
+    $('.randomDog').on('click', () => {
+        $('.breeds').hide();
+        $('.about').hide();
+        $('.getDogPic').show();
+    });
+    $('.aboutPage').on('click', () => {
+        $('.getDogPic').hide();
+        $('.breeds').hide();
+        $('.about').show();
+    })
+};
