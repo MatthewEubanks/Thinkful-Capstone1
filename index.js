@@ -29,7 +29,7 @@ function loadDogs() {
         $.each(breeds, function (dog, breed) {
             if (breeds[dog].length >= 1) {
                 for (let i = 0; i < breeds[dog].length; i++) {
-                    $(".dog-selector").append(`<option value=${dog}-${breeds[i]}>${breeds[dog][i]} ${dog}</option>`);
+                    $(".dog-selector").append(`<option value=${dog}-${breed[i]}>${breeds[dog][i]} ${dog}</option>`);
                 }
             } else if (breeds[dog].length < 1) {
                 $(".dog-selector").append(`<option value=${dog}>${dog}</option>`);
