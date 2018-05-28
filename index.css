@@ -4,8 +4,10 @@ body {
 .header {
     background-color: rgb(240, 198, 60);
 }
-h1 {
+h1, .breeds, .about, .getDogPic, .dog-selector, #breed-name {
     font-family: 'Luckiest Guy', cursive;
+}
+h1 {
     padding-top: 25px;
     padding-bottom: 25px;
     margin: 0 auto;
@@ -21,7 +23,7 @@ h1 {
     margin-left: 25px;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    font-family: 'Luckiest Guy', cursive;
+    
 }
 
 .getDogPic {
@@ -62,19 +64,25 @@ img {
 }
 .breeds {
     text-align: center;
-    margin-top: 0px;
-    margin-left: 25px;
     margin-bottom: 20px;
-    font-family: 'Luckiest Guy', cursive;
 }
 .dog-selector {
     margin-bottom: 25px;
+}
+#breed-name {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 800px) {
     .column {
         flex: 50%;
         max-width: 50%;
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -137,9 +145,6 @@ img {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-.breeds{
-    display: none;
-}
-.getDogPic {
+.breeds, .getDogPic, #breed-name {
     display: none;
 }
