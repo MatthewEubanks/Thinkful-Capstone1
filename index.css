@@ -4,7 +4,7 @@ body {
 .header {
     background-color: rgb(240, 198, 60);
 }
-h1, .breeds, .about, .getDogPic, .dog-selector, #breed-name {
+h1, #breeds, #about, #getDogPic, .dog-selector, #breed-name {
     font-family: 'Luckiest Guy', cursive;
 }
 h1 {
@@ -17,7 +17,7 @@ h1 {
     text-align: center;
     margin-bottom: 25px;
 }
-.about {
+#about {
     text-align: center;
     margin-top: 0px;
     margin-left: 25px;
@@ -26,7 +26,7 @@ h1 {
     
 }
 
-.getDogPic {
+#getDogPic {
     background-color: rgb(150, 160, 252);
     border: none;
     color: white;
@@ -37,18 +37,18 @@ h1 {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     
 }
-.getDogPic:hover {
+#getDogPic:hover {
     background-color: rgb(241, 116, 204); /* Green */
     color: white;
 }
 
-.image-content {
+#image-content {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px; 
    
 }
-.getDogPic:hover {
+#getDogPic:hover {
     cursor: pointer;
 }
 img {
@@ -62,7 +62,7 @@ img {
     box-shadow: 10px 10px 5px grey;
     
 }
-.breeds {
+#breeds {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -145,6 +145,6 @@ img {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-.breeds, .getDogPic, #breed-name {
+#breeds, #getDogPic, #image-content, #breed-name {
     display: none;
 }

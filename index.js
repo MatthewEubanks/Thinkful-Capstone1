@@ -1,6 +1,6 @@
 function getRandomDog() {
     $.getJSON("https://dog.ceo/api/breeds/image/random", function (data) {
-        $(".image-content").html("<img src='" + data.message + "'>");
+        $("#image-content").html("<img src='" + data.message + "'>");
         let url = data.message.split("/");
         breed = url[4].toUpperCase();
         $('#breed-name').empty();
@@ -8,7 +8,7 @@ function getRandomDog() {
     });
 };
 
-$('.getDogPic').on('click', function () {
+$('#getDogPic').on('click', function () {
     getRandomDog();
 });
 
@@ -16,7 +16,7 @@ function getChosenDog() {
     let selectedDog = $('.dog-selector option:selected').val();
     let dogUrl = selectedDog.replace(/-/g, '/');
     $.getJSON(`https://dog.ceo/api/breed/${dogUrl}/images/random`, function (result) {
-        $('.image-content').html(`<img src=${result.message}>`);
+        $('#image-content').html(`<img src=${result.message}>`);
     });
 };
 
@@ -37,7 +37,7 @@ function loadDogs() {
         });
 
         $.getJSON(`https://dog.ceo/api/breed/${firstDog}/images/random`, function (result) {
-            $('.image-content').html(`<img src=${result.message}>`);
+            $('#image-content').html(`<img src=${result.message}>`);
         });
     });
 };
@@ -64,25 +64,45 @@ function closeNav() {
 
 function openHidden() {
     $('.chooseDog').on('click', () => {
-        $('.getDogPic').hide();
-        $('.about').hide();
-        $('.breeds').show();
-        $('#breed-name').show();
+        $('#getDogPic').hide();
+        $('#about').hide();
+        $('#image-content').hide();
+        $('#breeds').show();
+       $('#breed-name').hide();
     });
     $('.randomDog').on('click', () => {
-        $('.breeds').hide();
-        $('.about').hide();
-        $('.getDogPic').show();
-        $('#breed-name').show();
+        $('#breed-name').hide();
+        $('#image-content').hide();
+        $('#breeds').hide();
+        $('#about').hide();
+        $('#getDogPic').show();
     });
     $('.aboutPage').on('click', () => {
-        $('.getDogPic').hide();
-        $('.breeds').hide();
+        $('#getDogPic').hide();
+        $('#breeds').hide();
+        $('#image-content').hide();
         $('#breed-name').hide();
-        $('.about').show();
+        $('#about').show();
+    });
+};
+function showMore (){
+    $('#getDogPic').on('click', () => {
+        $('#image-content').show();
+        $('#breed-name').show();
+    });
+    $('.dog-selector').on('change', () => {
+        $('#image-content').show();
+        $('#breed-name').show();
+    });
+};
+function closeSideNav () {
+    $('#mySidenav').on('mouseleave', () => {
+        closeNav();
     });
 };
 $(document).ready(function () {
     loadDogs();
     openHidden();
+    showMore();
+    closeSideNav ();
 });
