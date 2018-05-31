@@ -5,6 +5,8 @@ function getRandomDog() {
         breed = url[4].toUpperCase();
         $('#breed-name').empty();
         displayBreed(breed);
+        $('#image-content').show();
+        $('#breed-name').show();
     });
 };
 
@@ -17,6 +19,8 @@ function getChosenDog() {
     let dogUrl = selectedDog.replace(/-/g, '/');
     $.getJSON(`https://dog.ceo/api/breed/${dogUrl}/images/random`, function (result) {
         $('#image-content').html(`<img src=${result.message}>`);
+        $('#image-content').show();
+        $('#breed-name').show();
     });
 };
 
@@ -68,7 +72,7 @@ function openHidden() {
         $('#about').hide();
         $('#image-content').hide();
         $('#breeds').show();
-       $('#breed-name').hide();
+        $('#breed-name').hide();
     });
     $('.randomDog').on('click', () => {
         $('#breed-name').hide();
@@ -85,17 +89,8 @@ function openHidden() {
         $('#about').show();
     });
 };
-function showMore (){
-    $('#getDogPic').on('click', () => {
-        $('#image-content').show();
-        $('#breed-name').show();
-    });
-    $('.dog-selector').on('change', () => {
-        $('#image-content').show();
-        $('#breed-name').show();
-    });
-};
-function closeSideNav () {
+
+function closeSideNav() {
     $('#mySidenav').on('mouseleave', () => {
         closeNav();
     });
@@ -103,6 +98,5 @@ function closeSideNav () {
 $(document).ready(function () {
     loadDogs();
     openHidden();
-    showMore();
-    closeSideNav ();
+    closeSideNav();
 });
