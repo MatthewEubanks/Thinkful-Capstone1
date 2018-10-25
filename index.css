@@ -1,150 +1,168 @@
 body {
-    background-image: url("https://media.istockphoto.com/vectors/seamless-paw-print-pattern-vector-id165495639");
+  background-image: url('./images/2919733.png');
 }
 .header {
-    background-color: rgb(240, 198, 60);
+  background-color: #f2e19f;
 }
-h1, #breeds, #about, #getDogPic, .dog-selector, #breed-name {
-    font-family: 'Luckiest Guy', cursive;
+h1,
+#breeds,
+#about,
+#getDogPic,
+.dog-selector,
+#breed-name {
+  font-family: 'Roboto', sans-serif;
 }
 h1 {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin: 0 auto;
-    text-shadow: 5px 5px #a3ceff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 auto;
 }
 .top {
-    text-align: center;
-    margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 #about {
-    text-align: center;
-    margin-top: 0px;
-    margin-left: 25px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 #getDogPic {
-    background-color: rgb(150, 160, 252);
-    border: none;
-    color: white;
-    padding: 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
+  background-color: rgb(150, 160, 252);
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #getDogPic:hover {
-    background-color: rgb(241, 116, 204); /* Green */
-    color: white;
+  background-color: rgb(241, 116, 204); /* Green */
+  color: white;
 }
 
 #image-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px; 
-   
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 #getDogPic:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border: 4px solid blue;
-    box-shadow: 10px 10px 5px grey;
-    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 4px solid blue;
+  box-shadow: 10px 10px 5px grey;
 }
 #breeds {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .dog-selector {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 #breed-name {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 25px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 25px;
 }
 
 @media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 .material-icons {
-    cursor: pointer;
+  cursor: pointer;
 }
+/* The sidebar menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: rgb(240, 198, 60); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  margin: 0;
+  padding: 0;
+  width: 200px;
+
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: #f2e19f;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    display: block;
-    transition: 0.3s;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #050505;
+  display: block;
+}
+.sidenav a.aboutPage {
+  background-color: #cf417b;
+  color: white;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+#content {
+  margin-left: 200px;
+  padding: 5px 16px;
+  height: 1000px;
+  transition: margin-left 0.5s;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
-#breeds, #getDogPic, #image-content, #breed-name {
-    display: none;
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidenav a {
+    float: left;
+  }
+  #content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+  }
+}
+#breeds,
+#getDogPic,
+#image-content,
+#breed-name {
+  display: none;
 }

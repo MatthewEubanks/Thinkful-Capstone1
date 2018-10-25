@@ -5,45 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog Picture API</title>
+    <title>Find Your Favorit Dog</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <main>
         <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" id="active" class="aboutPage">Main</a>
             <a href="#" class="randomDog">Get a Random Dog</a>
             <a href="#" class="chooseDog">Choose a Breed</a>
-            <a href="#" class="aboutPage">About</a>
-        </div>
-        <span onclick="openNav()">
-            <i class="material-icons">menu</i>
-        </span>
-        <div id="main"></div>
-        <div class="header">
-            <div class="top">
-                <h1>Want a Cute Dog Picture?</h1>
-                <button id="getDogPic" class="getDogPic">Get a Random Dog</button>
-            </div>
-            <div id="breeds" class="breeds">
-                <h2>Choose The Breed of Dog You Would Like to See</h2>
-                <select class="dog-selector"></select>
-            </div>
-            <div id="about">
-                <h3>I made this page for people that would like to see a dog pitcture or would like to know what different breeds look like.</h3>
-                <p>If you click the Menu Icon in the upper left corner of the screen you will be able to select a random dog picture or a specific breed.</p>
-            </div>
-        </div>
-        <div id="breed-name"></div>
-        <div id="image-content">
 
         </div>
-        
-        
+        <div id="content">
+            <div class="header">
+                <div class="top">
+                    <h1>Want a Cute Dog Picture?</h1>
+                    <button id="getDogPic" class="getDogPic">Get a Random Dog</button>
+                </div>
+                <div id="breeds" class="breeds">
+                    <h2>Choose The Breed of Dog You Would Like to See</h2>
+                    <select class="dog-selector"></select>
+                </div>
+                <div id="about">
+                    <h3>I made this page for people that would like to see a dog pitcture or would like to know what
+                        different breeds look like.</h3>
+                    <p>If you click the Menu Icon in the upper left corner of the screen you will be able to select a
+                        random dog picture or a specific breed.</p>
+                </div>
+            </div>
+            <div id="breed-name"></div>
+            <div id="image-content">
+
+            </div>
+
+        </div>
     </main>
     <script src="index.js"></script>
 
