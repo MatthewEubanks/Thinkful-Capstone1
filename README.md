@@ -10,7 +10,7 @@ This first capstone is a page that integrates the dog api to be able to view a r
 ## Screenshots
 
 Retrieve Random Dog:
-![image](https://user-images.githubusercontent.com/1865449/47252115-f7a37b00-d3f3-11e8-88c9-f7473e101851.PNG)
+![choose-dog](https://user-images.githubusercontent.com/1865449/47252185-2b32d500-d3f5-11e8-84c3-6dba082eb1a1.PNG)
 
 Retreive Dog by Breed:
 ![image](https://user-images.githubusercontent.com/1865449/47252119-186bd080-d3f4-11e8-8aae-74d6f9f4809b.PNG)
